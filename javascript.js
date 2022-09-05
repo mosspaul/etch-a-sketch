@@ -5,14 +5,18 @@
 */
 const body = document.querySelector("body");
 const bigDiv = document.createElement("div");
-
 bigDiv.classList.add("bigDiv");
+
+
 for (let i = 0; i < 16; i++) {
     const midDiv = document.createElement("div");
     midDiv.classList.add("midDiv");
     for (let i = 0; i < 16; i++) {
         const lastDiv = document.createElement("div");
         lastDiv.classList.add("lastDiv");
+        lastDiv.addEventListener("mouseover", function (e) {
+            e.target.style.backgroundColor = "black"
+        });
         midDiv.appendChild(lastDiv);
     }
     bigDiv.appendChild(midDiv);
