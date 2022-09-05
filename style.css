@@ -1,0 +1,19 @@
+.bod {
+    background-color: grey;
+}
+
+.bigDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.midDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.lastDiv {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+}
