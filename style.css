@@ -1,5 +1,17 @@
+body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 33%;
+}
 .bod {
-    background-color: grey;
+    background-color: red;
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
 }
 
 .bigDiv {
@@ -15,5 +27,5 @@
 .lastDiv {
     width: 32px;
     height: 32px;
-    background-color: white;
+    background-color: grey;
 }
