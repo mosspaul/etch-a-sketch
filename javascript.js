@@ -3,10 +3,11 @@
 * create 16 child divs of big div with flex and row
 * for each mid div create 16 rows of normal divs
 */
-const body = document.querySelector("body");
+const bod = document.querySelector(".bod");
 const bigDiv = document.createElement("div");
 bigDiv.classList.add("bigDiv");
-
+// This is for making it only work when the mouse is held down
+let mousePressed = false;
 
 for (let i = 0; i < 16; i++) {
     const midDiv = document.createElement("div");
@@ -14,13 +15,18 @@ for (let i = 0; i < 16; i++) {
     for (let i = 0; i < 16; i++) {
         const lastDiv = document.createElement("div");
         lastDiv.classList.add("lastDiv");
-        lastDiv.addEventListener("mouseover", function (e) {
-            e.target.style.backgroundColor = "black"
+        lastDiv.addEventListener("mousedown", function () {
+            mousePressed = true;
         });
+        lastDiv.addEventListener("mouseover", draw);
         midDiv.appendChild(lastDiv);
     }
     bigDiv.appendChild(midDiv);
 }
-body.appendChild(bigDiv);
+bod.appendChild(bigDiv);
 
-
+function draw(e) {
+    if (mousePressed == true) {
+    e.target.style.backgroundColor = "black";
+    }
+}
