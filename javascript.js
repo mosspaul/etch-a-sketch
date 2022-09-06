@@ -50,9 +50,17 @@ function buildGrid(currentSize) {
 
     function draw(e) {
         if (mousePressed == true) {
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = randomColors();
         }
     }
+}
+
+function rand() {
+    return Math.floor(Math.random() * 256);
+}
+
+function randomColors() {
+    return `rgb(${rand()}, ${rand()}, ${rand()})`;
 }
 
 bod.appendChild(bigDiv);
