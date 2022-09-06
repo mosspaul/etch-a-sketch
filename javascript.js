@@ -9,8 +9,9 @@ const bigDiv = document.createElement("div");
 bigDiv.classList.add("bigDiv");
 
 const slider = document.createElement("input");
+slider.classList.add("slider");
 slider.setAttribute("type", "range");
-slider.setAttribute("min", 1);
+slider.setAttribute("min", 2);
 slider.setAttribute("max", 100);
 slider.setAttribute("step", 1);
 slider.setAttribute("value", 50);
